@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'pages/home_page.dart';
 import 'pages/second_page.dart';
 import 'pages/layout_demo_page.dart';
+import 'pages/elements_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => const MyHomePage(title: 'Student Management'),
         '/second': (context) => const SecondPage(),
         '/layout': (context) => const LayoutDemoPage(),
+        '/elements': (context) => const ElementsPage(),
       },
       initialRoute: '/',
     );

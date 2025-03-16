@@ -58,6 +58,12 @@ class _MyHomePageState extends State<MyHomePage> {
             },
           ),
           IconButton(
+            icon: const Icon(Icons.dashboard),
+            onPressed: () {
+              Navigator.pushNamed(context, '/elements');
+            },
+          ),
+          IconButton(
             icon: const Icon(Icons.navigate_next),
             onPressed: () {
               Navigator.pushNamed(context, '/second');
