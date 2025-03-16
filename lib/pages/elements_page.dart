@@ -19,7 +19,6 @@ class _ElementsPageState extends State<ElementsPage> {
       ),
       body: Column(
         children: [
-          // Number selector
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Row(
