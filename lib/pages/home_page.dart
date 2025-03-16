@@ -22,6 +22,18 @@ class _MyHomePageState extends State<MyHomePage> {
     if (_nameController.text.isNotEmpty && 
         _prenameController.text.isNotEmpty && 
         _ageController.text.isNotEmpty) {
+
+      final age = int.tryParse(_ageController.text);
+      if (age == null || age < 0 || age > 120) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('Please enter a valid age between 0 and 120'),
+            backgroundColor: Colors.red,
+          ),
+        );
+        return;
+      }
+
       setState(() {
         students.add({
           'name': _nameController.text,
@@ -33,6 +45,13 @@ class _MyHomePageState extends State<MyHomePage> {
         _prenameController.clear();
         _ageController.clear();
       });
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Student added successfully'),
+          backgroundColor: Colors.green,
+        ),
+      );
     }
   }
 
