@@ -52,6 +52,12 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
         actions: [
           IconButton(
+            icon: const Icon(Icons.grid_view),
+            onPressed: () {
+              Navigator.pushNamed(context, '/layout');
+            },
+          ),
+          IconButton(
             icon: const Icon(Icons.navigate_next),
             onPressed: () {
               Navigator.pushNamed(context, '/second');
